@@ -12,20 +12,20 @@ for param in parameters_tmp:
 
 
 content1=[]
-mesh1 = parameters['output8_stator_perio.su2']
+mesh1 = parameters['mesh1']
 with open(mesh1) as f:
     for line in f.readlines():
         if not any(st in line for st in names):
             content1.append(line)  
 
 content2=[]
-mesh2 = parameters['output_rotor_perio.su2']
+mesh2 = parameters['mesh2']
 with open(mesh2) as f:
     for line in f.readlines():
         if not any(st in line for st in names):
             content2.append(line)  
 
-combinedmesh = parameters["turbine_axial.su2"]
+combinedmesh = parameters["output_filename"]
 with open(combinedmesh, 'w') as f:
     f.write("NZONE=  2\n\n")
     f.write("IZONE=  1\n\n")
