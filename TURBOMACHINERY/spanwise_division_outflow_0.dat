@@ -1,0 +1,4 @@
+TITLE = "Global index visualization file"
+VARIABLES =
+   "iSpan"           "x_coord"           "y_coord"           "z_coord"            "radius""Relative Angular Coord ""Delta Angular Coord "         "processor"
+
